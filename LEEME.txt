@@ -1,0 +1,33 @@
+----------------------NOTAS GENERALES---------
+Generar documentos , leer documento , aplicar algoritmos y sacar resultados. Todo esta hecho en el mismo .cpp
+llamado main.cpp . Se usa c++11. Hay que tener presente en la misma carpeta de compilacion "la BBDD de palabras"
+La por defecto es la 50words.txt.
+
+---------------PARA COMPILAR -----------------
+
+g++ -Wall -Wextra -std=c++11  -o main main.cpp
+
+O EJECTUAR MAKEFILE.
+----------------------------------------------
+
+--------------VARIABLES EN main.cpp:---------- 
+
+A continuacion, tenemos variabales que nos permite hacer debuggin y probar con conjuntos de entradas diferentes.
+y mirar tiempos. 
+
+const int debug = 1; // jaccard results without times
+const int debug_time = 0; // times
+const int generation = 1; // generations of documents 
+const int ndocs = 20; // number of documents
+const int nwords = 50; //number of word/documents
+
+----------------------------------------------
+
+-------------BBDD DE PLABRAS------------------
+50words // longitud media palabra 3
+50words_avglong8 // el ultimo numero indica la longitud media de las palabraas del cojunto.
+500words_avglong5
+
+PARA PROBARLAS SE TIENE que cambiar en linea de la función  generating_docs() del main.cpp : 
+file.open("50words_avglong8.txt");
+----------------------------------------------
